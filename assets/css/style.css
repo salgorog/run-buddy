@@ -366,22 +366,79 @@ section {
   }
 
   .trainer {
-    
     margin: 20px;
     background: var(--secondary-color);
     color: var(--primary-color);
     flex: 1;
   }
 
-  .trainer img {
+  .trainer-img {
     width: 100%;
-    
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(252, 225, 56, 0.3), var(--secondary-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.6s;
+  } 
+  
+  .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;
+  }
+
+  .trainer-img:hover::after {
+    opacity: 1;
+  }
+
+  .trainer-img h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5px;
+    font-size: 28px;
+    top: 200px;
+    transition: 0.6s;
   }
   
+  .trainer-img h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    top: 200px; 
+    transition: 0.6s;
+  }
+
+  .trainer div {
+    overflow: hidden;
+  }
+
+  .trainer-1 {
+    background-image: url("./images2/trainer-1.jpg");
+    background-size: cover;
+  }
+
+  .trainer-2 {
+    background-image: url("./images2/trainer-2.jpg");
+    background-size: cover;
+  }
+
+  .trainer-3 {
+    background-image: url("./images2/trainer-3.jpg");
+    background-size: cover;
+  }
+
   .trainer-bio {
     padding: 25px;
-   
-   
     line-height: 1.3;
   }
 
@@ -395,22 +452,21 @@ section {
 
   .trainer-bio h3 {
     font-size: 28px;
-  
+    display: none;
   }
   
   .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
   }
   
   .trainer-bio p {
     font-size: 17px;
-    
   }
 
   .contact {
-    
     background: var(--secondary-color);
   }
 
@@ -425,12 +481,10 @@ section {
   }
 
   .contact-info iframe {
-    
     height: 400px;
   }
 
   .contact-info div {
-   
     color: white;
   }
 
@@ -531,7 +585,7 @@ section {
 }
 
 .grid-container {
-  justify-items: start | end | center | stretch;
+  justify-items: start  end  center  stretch;
 }
 
 .service-grid-item.both {
@@ -645,6 +699,38 @@ section {
     writing-mode: unset;
     grid-column: 1 / -1;
     grid-row: -1;
+  }
+
+  .trainer-img h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5px;
+    font-size: 28px;
+    top: 200px;
+    transition: 0.6s;
+    display: none;
+  }
+
+  .trainer-img h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    top: 200px; 
+    transition: 0.6s;
+    display: none;
+  }
+
+  .trainer-img:hover::after {
+    opacity: 1;
+    display: none;
+  }
+
+  .trainer-bio h3 {
+    display: block;
+  }
+
+  .trainer-bio h4 {
+    display: block;
   }
 
     /* this will be applied on any screen between 768px and 575px */
